@@ -44,7 +44,7 @@ summary.lm(AGEmodel)
 ```
 
 
-## Model LENGTH ~ HHEADLEN this is an example  
+## Model LENGTH ~ HEADLEN this is an example  
 
 ```{r}
 HEADLENmodel<- lm(LENGTH~HEADLEN,data=bears)
@@ -73,11 +73,22 @@ abline(CHESTmodel)
 summary.lm(CHESTmodel)
 ```
 
+## Model LENGTH ~ WEIGHT this is an example  
+
+```{r}
+WEIGHTmodel<- lm(LENGTH~WEIGHT,data=bears)
+plot(LENGTH~WEIGHT,data=bears)
+abline(WEIGHTmodel)
+summary.lm(WEIGHTmodel)
+```
+
 ## Model LENGTH ~ AGE  this is an example  
 
 ```{r}
-AGEmodel<- lm(LENGTH~AGE,data=bears)
-plot(LENGTH~AGE,data=bears)
-abline(AGEmodel)
-summary.lm(AGEmodel)
+MONTHmodel<- lm(LENGTH~MONTH,data=bears)
+plot(LENGTH~MONTH,data=bears)
+abline(MONTHmodel)
+summary.lm(MONTHmodel)
 ```
+
+for all the models HEADLEN had the highest adjusted R Squared amongst the rest.
